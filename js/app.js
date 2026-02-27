@@ -164,13 +164,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    document.querySelectorAll('input[type="text"]').forEach(input => {
-        input.addEventListener('keypress', function(e) {
-            if (isNaN(String.fromCharCode(e.keyCode)) && e.keyCode !== 8) {
-                e.preventDefault();
-            }
-        });
+document.querySelectorAll('.card-input, #cvv, #otp-input').forEach(input => {
+    input.addEventListener('keypress', function(e) {
+        if (isNaN(String.fromCharCode(e.keyCode)) && e.keyCode !== 8) {
+            e.preventDefault();
+        }
     });
+});
     
     document.getElementById('personal-info-form').addEventListener('submit', function(e) {
         e.preventDefault(); // يمنع التحديث الافتراضي للصفحة
