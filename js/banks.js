@@ -1,0 +1,23 @@
+const banks = [
+    { id: 'emirates_nbd', name: 'بنك الإمارات دبي الوطني', logo: 'https://i.ibb.co/dwhqmDsF/Emirates-NBD.jpg' },
+    { id: 'first_abu_dhabi', name: 'بنك أبوظبي الأول', logo: 'https://i.ibb.co/gnNdPDJ/First-Abu-Dhabi-Bank-Logo-svg.png' },
+    { id: 'dubai_islamic', name: 'بنك دبي الإسلامي', logo: 'https://i.ibb.co/8DbXSsw0/dib-logo-personal-business-og.jpg' },
+    { id: 'abu_dhabi_commercial', name: 'بنك أبوظبي التجاري', logo: 'https://i.ibb.co/7JhfxY41/image.webp' },
+    { id: 'mashreq', name: 'بنك المشرق', logo: 'https://i.ibb.co/21YLkTtB/MASQ-AE-BIG-e09012bc.png' },
+    { id: 'rakbank', name: 'بنك رأس الخيمة الوطني', logo: 'https://i.ibb.co/jkNfYJxc/RAKBANK.gif' },
+    { id: 'adib', name: 'بنك أبوظبي الإسلامي', logo: 'https://i.ibb.co/ynB1yRtg/images.jpg' },
+    { id: 'cbd', name: 'البنك التجاري', logo: 'https://www.cbd.ae/-/media/project/cbd/cbd-website/logo/cbd-logo.png' },
+    { id: 'sharjah_islamic', name: 'بنك الشارقة الإسلامي', logo: 'https://i.ibb.co/8nzs4f2R/image.webp' },
+    { id: 'ajman_bank', name: 'بنك عجمان', logo: 'https://i.ibb.co/hRRHgRCq/ajman-bank-logo.jpg' },
+    { id: 'invest_bank', name: 'بنك المارية المحلي', logo: 'https://i.ibb.co/BXhSMxp/al-maryah-community-bank-logo-1.jpg' },
+    { id: 'mashreq_al_islami', name: 'المشرق الإسلامي', logo: 'https://i.ibb.co/Z1SNZSTP/images-1.png' },
+    { id: 'al_hilal', name: 'بنك الهلال', logo: 'https://i.ibb.co/vvXdQ2x6/EUWo3ho-XQAEv8mo.jpg' },
+    { id: 'al_masraf', name: 'بنك المصرف', logo: 'https://i.ibb.co/hJ3WQ948/image.webp' },
+    { id: 'union_national', name: 'بنك الاتحاد الوطني', logo: 'https://i.ibb.co/fdhb2wvL/47-100833-uae-union-national-bank-world-star-system-700x400.png' },
+    { id: 'emirates_islamic', name: 'بنك الإمارات الإسلامي', logo: 'https://i.ibb.co/Y7d2w4KR/emirates-islamic-bank-01.jpg' },
+    { id: 'national_bank_of_fujairah', name: 'بنك الفجيرة الوطني', logo: 'https://i.ibb.co/KxzwNLPC/nbf.jpg' },
+    { id: 'commercial_bank_international', name: 'البنك التجاري الدولي', logo: 'https://i.ibb.co/Hf1ft7RK/cbi-logo-joint.jpg' },
+    { id: 'national_bank_of_ras_al_khaimah', name: 'بنك رأس الخيمة الوطني', logo: 'https://i.ibb.co/jkNfYJxc/RAKBANK.gif' },
+    { id: 'standard_chartered', name: 'بنك ستاندرد تشارترد', logo: 'https://i.ibb.co/ZR7xH8LL/image.jpg' },
+    { id: 'hsbc', name: 'بنك HSBC', logo: 'https://i.ibb.co/ns4nczRR/unnamed.png' }
+];
