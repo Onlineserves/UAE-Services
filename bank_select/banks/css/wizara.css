@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;\a 	0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif; }
+
+.home {
+  background: url("../image/background.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 405px; }
+  .home .ho {
+    background: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 405px; }
+    .home .ho .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 50px; }
+      .home .ho .navbar .limaja img {
+        width: 134px;
+        height: 70px; }
+      .home .ho .navbar .icon ul {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        align-items: center; }
+        .home .ho .navbar .icon ul li {
+          padding-left: 40px;
+          color: white; }
+          .home .ho .navbar .icon ul li i {
+            font-size: 25px;
+            cursor: pointer;
+            transition: 0.2s; }
+            .home .ho .navbar .icon ul li i:hover {
+              color: #ccc; }
+            @media (max-width: 991px) {
+              .home .ho .navbar .icon ul li i {
+                font-size: 35px; } }
+          @media (max-width: 991px) {
+            .home .ho .navbar .icon ul li.oo {
+              display: none; } }
+          .home .ho .navbar .icon ul li.gio {
+            display: none; }
+            @media (max-width: 991px) {
+              .home .ho .navbar .icon ul li.gio {
+                display: block; } }
+
+.validation {
+  margin-top: -200px;
+  padding-bottom: 40px; }
+  .validation h2 {
+    color: white;
+    font-weight: 600;
+    font-size: 28px; }
+  .validation .hr {
+    color: white; }
+  .validation h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; }
+    .validation h4 span {
+      color: #FFCA00;
+      font-size: 20px; }
+    .validation h4 i {
+      font-size: 10px;
+      margin: 0 10px; }
+  .validation .sender {
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 6px 0px #ccc;
+    background: #fff; }
+    .validation .sender .left {
+      background: #EEF0F3;
+      padding: 40px 20px; }
+      @media (max-width: 991px) {
+        .validation .sender .left {
+          display: flex;
+          justify-content: space-between; } }
+      .validation .sender .left .adn {
+        align-items: center; }
+        .validation .sender .left .adn span {
+          width: 15px;
+          height: 15px;
+          background: #00aae7;
+          border-radius: 100%;
+          position: relative; }
+          .validation .sender .left .adn span:after {
+            position: absolute;
+            content: "";
+            height: 55px;
+            width: 3px;
+            top: 15px;
+            left: 6px;
+            background: #DEE2E6; }
+        .validation .sender .left .adn p {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 0;
+          margin-left: 20px;
+          color: black; }
+      .validation .sender .left .adr {
+        align-items: center;
+        margin-top: 40px; }
+        .validation .sender .left .adr span {
+          width: 15px;
+          height: 15px;
+          background: white;
+          border-radius: 100%; }
+        .validation .sender .left .adr p {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 0;
+          margin-left: 20px;
+          color: #ADB5BD; }
+      .validation .sender .left .pijama .statu {
+        display: block; }
+        .validation .sender .left .pijama .statu p {
+          font-size: 15px;
+          font-weight: 600;
+          color: gray;
+          margin-bottom: 0; }
+        .validation .sender .left .pijama .statu span {
+          font-size: 16px;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 0.8); }
+      @media (max-width: 991px) {
+        .validation .sender .left .web {
+          display: none; } }
+      .validation .sender .left .responsive {
+        display: none; }
+        @media (max-width: 991px) {
+          .validation .sender .left .responsive {
+            display: block; } }
+    .validation .sender .right {
+      padding: 40px;
+      position: relative; }
+      .validation .sender .right img {
+        width: 300px; }
+      .validation .sender .right h3 {
+        font-weight: 600;
+        display: flex;
+        align-items: center; }
+        .validation .sender .right h3 span i {
+          color: #ADB5BD;
+          margin-left: 10px; }
+      .validation .sender .right p {
+        color: #ADB5BD;
+        font-size: 14px;
+        font-weight: 600; }
+      .validation .sender .right h6 {
+        position: absolute;
+        top: 50px;
+        right: 40px;
+        font-size: 15px;
+        color: #00aae7; }
+      .validation .sender .right .login .all_one {
+        display: flex;
+        justify-content: space-between; }
+        .validation .sender .right .login .all_one .box {
+          width: 48%; }
+          .validation .sender .right .login .all_one .box .any {
+            color: red;
+            font-size: 14px;
+            display: none; }
+          .validation .sender .right .login .all_one .box input {
+            border-radius: 1px;
+            background: #EEF0F3;
+            border: 1px solid #ADB5BD;
+            padding: 10px;
+            font-size: 14px; }
+            .validation .sender .right .login .all_one .box input:focus {
+              box-shadow: none; }
+            .validation .sender .right .login .all_one .box input::placeholder {
+              font-size: 14px; }
+          .validation .sender .right .login .all_one .box label {
+            font-weight: 600; }
+          .validation .sender .right .login .all_one .box .star {
+            color: red; }
+        .validation .sender .right .login .all_one .only {
+          width: 100%; }
+      @media (max-width: 767px) {
+        .validation .sender .right .login .mistak {
+          display: block; } }
+      @media (max-width: 767px) {
+        .validation .sender .right .login .mistak .zibra {
+          width: 100%; } }
+      .validation .sender .right .bottona {
+        width: 100%;
+        text-align: right;
+        margin-top: 50px; }
+        .validation .sender .right .bottona .btn {
+          background: #00aae7;
+          color: white;
+          border-radius: 1px;
+          font-weight: 700;
+          padding: 8px 40px;
+          transition: 0.1s; }
+          .validation .sender .right .bottona .btn:hover {
+            background: #00BBFF; }
+          @media (max-width: 667px) {
+            .validation .sender .right .bottona .btn {
+              width: 100%; } }
+
+.fotter {
+  background: #1F7AAE;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex; }
+  .fotter .bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    @media (max-width: 767px) {
+      .fotter .bot {
+        display: block;
+        text-align: center; } }
+    .fotter .bot p {
+      font-size: 15px;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 0; }
+      @media (max-width: 767px) {
+        .fotter .bot p {
+          margin-bottom: 30px; } }
+    .fotter .bot .images img {
+      margin-left: 20px; }
+      @media (max-width: 767px) {
+        .fotter .bot .images img {
+          margin-left: 0; } }
+    @media (max-width: 767px) {
+      .fotter .bot .images {
+        justify-content: space-between; } }
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  background: rgba(252, 252, 252, 0.9); }
+  .loading .spinner-border {
+    color: #00AAE7; }
+
+.sms_end {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .sms_end .messag {
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 5px; }
+    @media (max-width: 767px) {
+      .sms_end .messag {
+        width: 100%; } }
+    .sms_end .messag .image-logo {
+      background: #002466;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .sms_end .messag .image-logo img {
+        width: 100px; }
+    .sms_end .messag .smock {
+      margin-top: 40px; }
+      .sms_end .messag .smock img {
+        width: 120px; }
+    .sms_end .messag .dd {
+      padding: 40px; }
+      .sms_end .messag .dd input {
+        border: 2px solid #667790;
+        height: 60px;
+        margin-top: 10px;
+        border-radius: 1px;
+        padding-left: 30px; }
+        .sms_end .messag .dd input:focus {
+          box-shadow: none;
+          border: 2px solid #667790; }
+      .sms_end .messag .dd .btn {
+        height: 50px;
+        width: 100%;
+        background: #D3135A;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 1px;
+        margin-top: 30px;
+        background: #00aae7;
+        font-size: 15px;
+        font-weight: 600; }
+        .sms_end .messag .dd .btn:hover {
+          background: #00BBFF; }
+    .sms_end .messag .foot {
+      background: #002466;
+      width: 100%;
+      height: 15px; }
+
+.succes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .succes .messag {
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 5px; }
+    @media (max-width: 767px) {
+      .succes .messag {
+        width: 100%; } }
+    .succes .messag .image-logo {
+      background: #002466;
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .succes .messag .image-logo img {
+        width: 100px; }
+    .succes .messag .smock {
+      padding: 40px 40px 0 40px; }
+      .succes .messag .smock h1 {
+        font-size: 30px;
+        font-weight: 400;
+        color: #002466;
+        margin-bottom: 40px; }
+      .succes .messag .smock p {
+        font-size: 17px;
+        font-weight: 400;
+        margin-top: 20px; }
+    @media (max-width: 767px) {
+      .succes .messag .isadac img {
+        width: 300px; } }
+    .succes .messag .dd {
+      padding: 40px; }
+      .succes .messag .dd input {
+        border: 2px solid #667790;
+        height: 60px;
+        margin-top: 10px;
+        border-radius: 1px;
+        padding-left: 30px; }
+        .succes .messag .dd input:focus {
+          box-shadow: none;
+          border: 2px solid #667790; }
+      .succes .messag .dd .btn {
+        height: 50px;
+        width: 100%;
+        background: #D3135A;
+        color: white;
+        font-size: 12px;
+        font-weight: 600;
+        border-radius: 1px;
+        margin-top: 30px; }
+        .succes .messag .dd .btn:hover {
+          border: 2px solid #D3135A;
+          color: #D3135A;
+          background: #fff; }
+    .succes .messag .foot {
+      background: #002466;
+      width: 100%;
+      height: 15px; }
+
+/*# sourceMappingURL=wizara.css.map */

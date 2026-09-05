@@ -1,0 +1,76 @@
+
+///#######***Color***######\\\
+
+$blue:rgb(0,170,231);
+$yellow: #EEDC00;
+
+///#######***Mixing***######\\\
+
+
+
+@mixin lools{
+	list-style:none;
+	padding-left:0;
+	margin-bottom:0;
+	display:flex;
+	justify-content:end;
+	padding-right:40px;
+};
+
+@mixin bottons{
+	font-weight:600;
+	color:white;
+	background:$green;
+	border-radius: 30px;
+    padding: 9px 40px;
+    font-size: 16px;
+}
+
+
+@mixin bottons
+{
+	height:50px;
+	width:100%;
+	background:#D3135A;
+	color:white;
+	font-size: 12px;
+	font-weight:600;
+	border-radius:1px;
+	margin-top:30px;
+}
+
+
+@mixin breakpoints($point) {
+	@if $point == "mobile" {
+        @media (max-width:767px){
+        	@content;
+        }
+	}@else if $point == "medium" {
+		@media (max-width:991px){
+        	@content;
+        }
+	}@else if $point == "s_larg" {
+		@media (max-width:1178px){
+        	@content;
+        }
+	}@else if $point == "large" {
+		@media (max-width:1259px){
+        	@content;
+        }
+	}@else if $point == "xxl" {
+		@media (max-width:1339px){
+        	@content;
+        }
+	}@else if $point == "nokia" {
+		@media (max-width:667px){
+        	@content;
+        }
+	}
+	@else if $point == "so_md" {
+		@media (max-width:840px){
+        	@content;
+        }
+	}
+}
+
+
